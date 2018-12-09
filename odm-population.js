@@ -2,11 +2,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const stringify = (obj) => (Object.keys(obj).reduce((res, prop) => res += prop + ': ' + obj[prop] + ' ' , '{ ') + ' }');
-
-// подключение
+// connecting
 mongoose.connect("mongodb://vpavlenko:vpavlenko1@ds227674.mlab.com:27674/mongoexample", { useNewUrlParser: true });
-// установка схемы
+// creating schemas
 const personSchema = Schema({
     _id: Schema.Types.ObjectId,
     name: String,

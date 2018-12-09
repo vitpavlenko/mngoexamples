@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 const stringify = (obj) => (Object.keys(obj).reduce((res, prop) => res += prop + ': ' + obj[prop] + ' ' , '{ ') + ' }');
 
-// подключение
+// connecting
 mongoose.connect("mongodb://vpavlenko:vpavlenko1@ds227674.mlab.com:27674/mongoexample", { useNewUrlParser: true });
-// установка схемы
+// creating schemas
 const userScheme = new Schema({
     name: {
         type: String,
